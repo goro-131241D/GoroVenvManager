@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usage</title>
+    <style>
+        body {
+            font-size: 14px;
+        };
+        .monospace {
+            font-family: "Courier New", Courier, monospace;
+        };
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Usage</h1>
+
+<h2>[Tabs]</h2>
+<ol>
+<li>Create Venv: Create a Venv environment and copy the template.</li>
+<li>Global Version: Set the global version.</li>
+<li>Local Version: Set the local version.</li>
+<li>Install: Install Python.</li>
+<li>pyenv: Install the pyenv-win environment.</li>
+<li>Settings: Configuration.</li>
+<li>Usage: Instructions.</li>
+</ol>
+
+<h2>[About Venv Environment]</h2>
+<p>
+The Venv environment is created in the .venv folder. Although users can usually choose the location freely, this is pre-determined.</br>
+Version management is handled using pyenv-win, and virtual environments are created using Venv. These two tools are used together.
+</p>
+
+<h2>[Procedure]</h2>
+<ul>
+<li>Set the language in the Settings tab and restart the tool.</li>
+<li>For the first time, set up the pyenv-win environment in the "5. pyenv" tab.</li>
+<li>Install Python and make it available using the "4. Install" tab.</li>
+<li>Set the global version in the "2. Global Version" tab. "Global" means it can be used regardless of the folder.</li>
+<li>Set the local version in the "3. Local Version" tab. "Local" means it is valid only within the folder.</li>
+<li>Create a Venv environment in the specified folder and copy the specified template folder using the "Create Venv" tab.</li>
+</ul>
+
+<h2>[Version Confirmation]</h2>
+<p>
+    You can check the installed versions using `pyenv versions`.</br>
+    If there is no active version set: Nothing will be displayed, or the downloaded versions will be shown.</br>
+    If the global version is active: `pyenv version` will display the version number followed by the location of the `version` file within the `.pyenv` folder. Example: "* 3.12.5 (set by C:\Users\UserName\.pyenv\pyenv-win\version)"</br>
+    If the local version is active: the version number will be followed by the location of the `.python-version` file.
+</p>
+<h3>Example of a Local Version Being Set</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+    3.12.3<br/>
+  * 3.12.4 (set by C:\Users\UserName\TestFolder\<span class="highlight">.python-version</span>)<br/>
+    3.12.5<br/>
+</p>
+<p>The .python-version file has been created in the local folder. It can also be created in a parent folder, in which case it will be effective for all folders under that parent folder.</p>
+
+<h3>Example of a Global Version Being Set</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+  * 3.12.3 (set by C:\Users\UserName\<span class="highlight">.pyenv\pyenv-win\version</span>)<br/>
+    3.12.4<br/>
+    3.12.5<br/>
+</p>
+<p>The version file is recorded in the version file inside the .pyenv folder. The .pyenv folder contains the necessary files for pyenv and the installed Python versions.</p>
+
+<h3>Example Where Neither Global Nor Local Version is Set</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+    3.12.3<br/>
+    3.12.4<br/>
+    3.12.5<br/>
+</p>
+<p>Nothing is displayed next to the versions. In this case, please note that <span class="highlight">Python installed via pyenv-win cannot be used.</span></p>
+
+<h2>[Details]</h2>
+<p>
+Version management and Venv environment creation are done using pyenv-win and python -m venv .venv.</br>
+This tool does not directly manage versions or virtual environments.</br>
+You can also perform these tasks directly from the command prompt without using this tool.</br>
+This is a simple support tool. Messages from the commands are displayed on the screen, so please check the messages to confirm if installations, etc., were completed successfully.</br>
+The input data type is not checked. Please enter the correct data.</br>
+</p>
+<p>
+<h3>1. Create Venv: Create a Venv environment and copy the template</h3>
+Select the folder to create the Venv environment, select the template, and click the "Create" button to create the Venv environment.</br>
+A template is a collection of useful files when programming.</br>
+The templates are in the templates folder in the folder where this program is stored.</br>
+You can create your own template by changing the folder name or the files inside it.</br>
+Note that it can only be created in an empty folder, considering overwriting. If there are necessary files, please move them elsewhere before creating.</br>
+</p>
+<p>
+<h3>2. Global Version: Set the global version</h3>
+The global version is a version that can be used regardless of the folder.</br>
+Set and use a convenient version.</br>
+Since there are frequent version updates, download and use the new version each time.</br>
+</p>
+<p>
+<h3>3. Local Version: Set the local version</h3>
+The local version is a version that is valid only within the folder.</br>
+When developing, you may need to change the version for each project.</br>
+This is when you use it.</br>
+The selectable versions will be displayed when you either choose a folder by clicking the "Select" button or press the "Set" button.</br>
+</p>
+<p>
+<h3>4. Install: Install Python</h3>
+Use this when there is a version update or when you want to use a special version.</br>
+There is no uninstall function in this tool. Please do it from the command.</br>
+</p>
+<p>
+<h3>5. pyenv: Install the pyenv-win environment</h3>
+Use this the first time and when upgrading pyenv-win.</br>
+When upgrading, delete the .pyenv folder in the user folder and then run it.</br>
+Note that in this case, the installed Python versions will also be deleted.</br>
+Alternatively, you can update from the command.</br>
+An update feature might be added in the future.</br>
+</p>
+<p>
+<h3>6. Settings: Configuration</h3>
+Set the language in the Languages option. It will take effect after restarting the tool.</br>
+Set the base folder in the BaseFolder option to make folder selection operations easier.
+</p>
+<p>
+<h3>7. Usage: Instructions</h3>
+</p>
+<h2>【Issues】</h2>
+<p>
+<ul>
+<li>When the Python version that can be used to create a venv is not set, an error occurs, but it is difficult to recognize.</li>
+<li>It does not support updates of pyenv-win.</li>
+<li>Some parts that should have flexibility in settings are hard-coded.</li>
+<li>It is difficult to distinguish whether it is set locally or globally.</li>
+</ul>
+There may be other improvements needed, but please bear with us.
+</p>
+
+
+<h2>[License]</h2>
+<p>
+This tool is licensed under the GNU General Public License v3.0 (GPL-3.0).</br>
+This means anyone can freely use, modify, and redistribute it, but any modified software must be released under the same license.</br>
+For details, please see the following URL:</br>
+<a href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a>
+</p>
+
+<p>
+HP: https://goro-bizaid.com</br>
+X URL: https://x.com/goro_bizaid_e</br>
+X UserName: @Goro_bizaid_e
+</p>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.gitignore
+
+# Jupyter Notebookのチェックポイントディレクトリを無視する
+.ipynb_checkpoints/
+
+# Jupyter ファイルを無視する
+*.ipynb
+
+# Python関連ファイルを無視する
+__pycache__/
+*.pyc
+
+# 環境ファイルを無視する
+.env
+.venv/
+env/
+venv/
+
+# 出力画像やデータファイルを無視する
+*.csv
+*.h5
+*.hdf5
+*.log
+*.sqlite3
+*.parquet
+*.png
+*.jpg
+*.jpeg
+
+# カスタムJupyterカーネル設定
+.ipython/
+.jupyter/
+
+#独自フォルダと独自ファイルを無視する
+text/
+test[0-9]*.py
+めも.txt

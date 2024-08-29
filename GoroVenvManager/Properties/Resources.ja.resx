@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PyenvTabInfoLabelText" xml:space="preserve">
+    <value>Pyenvをインストールします。
+「Run」ボタンを押すとpyenv-winをインストールし、pyenv-winが使えるように環境変数を設定します。</value>
+  </data>
+  <data name="InstallComplete" xml:space="preserve">
+    <value>インストール完了</value>
+  </data>
+  <data name="InstallTabInfoLavelText" xml:space="preserve">
+    <value>Pythonをインストールします。
+バージョンを入力してください。「Run」ボタンを押すとインストールされます。</value>
+  </data>
+  <data name="DownloadableVersion" xml:space="preserve">
+    <value>ダウンロード可能なバージョン</value>
+  </data>
+  <data name="DownloadedVersion" xml:space="preserve">
+    <value>ダウンロード済のバージョン</value>
+  </data>
+  <data name="EnterVersionToInstall" xml:space="preserve">
+    <value>インストールするバージョンを
+入力してください</value>
+  </data>
+  <data name="CommandResponseEndMarker" xml:space="preserve">
+    <value>===</value>
+  </data>
+  <data name="InstallPythonVersion" xml:space="preserve">
+    <value>Python {0} をインストールします</value>
+  </data>
+  <data name="ConfirmInstallation" xml:space="preserve">
+    <value>インストールを確認</value>
+  </data>
+  <data name="LocalVersionTabInfoLabelText" xml:space="preserve">
+    <value>ローカルバージョンを設定します。
+「Select」ボタンを押してフォルダを選択してください。バージョンを入力してください。「Set」ボタンを押すと設定されます。</value>
+  </data>
+  <data name="FolderToSet" xml:space="preserve">
+    <value>設定するフォルダ</value>
+  </data>
+  <data name="ConfigurableVersion" xml:space="preserve">
+    <value>設定可能なバージョン</value>
+  </data>
+  <data name="CheckVersionInFolder" xml:space="preserve">
+    <value>フォルダに設定されたバージョン</value>
+  </data>
+  <data name="CheckDotPythonVersionLocation" xml:space="preserve">
+    <value>.python-versionの場所を確認してください</value>
+  </data>
+  <data name="InvalidFolderSettingMessage" xml:space="preserve">
+    <value>正しいフォルダが設定されていません</value>
+  </data>
+  <data name="EnterFolderBeforeSetting" xml:space="preserve">
+    <value>設定する前にフォルダを入力してください。</value>
+  </data>
+  <data name="CheckVersionSetInFolder" xml:space="preserve">
+    <value>フォルダに設定されたバージョンを確認</value>
+  </data>
+  <data name="EnterVersionBeforeSetting" xml:space="preserve">
+    <value>バージョンを入力してから設定してください</value>
+  </data>
+  <data name="EnterVersionToSet" xml:space="preserve">
+    <value>設定するバージョンを入力してください</value>
+  </data>
+  <data name="SetLocalVersion" xml:space="preserve">
+    <value>ローカルバージョンを設定します</value>
+  </data>
+  <data name="SettingCompleted" xml:space="preserve">
+    <value>設定完了</value>
+  </data>
+  <data name="GlobalVersionTabInfoLabelText" xml:space="preserve">
+    <value>グローバルバージョンを設定します。
+バージョンを入力してください。「Set」ボタンを押すと設定されます。</value>
+  </data>
+  <data name="VersionNotSet" xml:space="preserve">
+    <value>バージョンが設定されていません</value>
+  </data>
+  <data name="SetGlobalVersion" xml:space="preserve">
+    <value>グローバルバージョンを設定します</value>
+  </data>
+  <data name="CheckSetGlobalVersion" xml:space="preserve">
+    <value>設定したグローバルバージョンを確認</value>
+  </data>
+  <data name="EnterFolder" xml:space="preserve">
+    <value>フォルダを入力してください</value>
+  </data>
+  <data name="CreateVenvTabInfoLabelTex" xml:space="preserve">
+    <value>仮想環境を作成します。
+「Select」ボタンを押してフォルダを選択してください。ComboBoxでテンプレートを選択してください。
+「Create」ボタンを押すと仮想環境が作成されます。</value>
+  </data>
+  <data name="VenvHomeNotSet" xml:space="preserve">
+    <value>VENV_HOME 環境変数が設定されていません</value>
+  </data>
+  <data name="TemplatesNotFound" xml:space="preserve">
+    <value>テンプレートが見つかりません</value>
+  </data>
+  <data name="TemplatesFolderNotFound" xml:space="preserve">
+    <value>テンプレートフォルダが見つかりません</value>
+  </data>
+  <data name="StartVenvCreation" xml:space="preserve">
+    <value>Venv環境作成開始</value>
+  </data>
+  <data name="SelectCorrectFolder" xml:space="preserve">
+    <value>正しいフォルダを
+選択してください</value>
+  </data>
+  <data name="VenvFolderNotEmpty" xml:space="preserve">
+    <value>Venv環境を作成するフォルダが空ではありません</value>
+  </data>
+  <data name="FolderNotEmpty" xml:space="preserve">
+    <value>フォルダが空ではありません</value>
+  </data>
+  <data name="VenvCreationFolder" xml:space="preserve">
+    <value>Venv環境を作成するフォルダ</value>
+  </data>
+  <data name="CopyTemplate" xml:space="preserve">
+    <value>テンプレートをコピーします</value>
+  </data>
+  <data name="TemplateNotSelected" xml:space="preserve">
+    <value>テンプレートが選択されていません</value>
+  </data>
+  <data name="TemplateNotCopied" xml:space="preserve">
+    <value>テンプレートはコピーされません</value>
+  </data>
+  <data name="UpdatePip" xml:space="preserve">
+    <value>pip をアップデートします</value>
+  </data>
+  <data name="VenvCreationCompleted" xml:space="preserve">
+    <value>Venv環境作成完了</value>
+  </data>
+  <data name="VenvCreated" xml:space="preserve">
+    <value>Venv環境を作成しました"</value>
+  </data>
+  <data name="EnterCorrectFolder" xml:space="preserve">
+    <value>正しいフォルダを入力してください</value>
+  </data>
+  <data name="CreateVenvDirectory" xml:space="preserve">
+    <value>.venv を作成</value>
+  </data>
+  <data name="FilePathEmpty" xml:space="preserve">
+    <value>ファイルパスが空です</value>
+  </data>
+  <data name="FilePathInvalidCharacters" xml:space="preserve">
+    <value>ファイルパスに無効な文字が含まれています</value>
+  </data>
+  <data name="FolderNotFound" xml:space="preserve">
+    <value>指定されたフォルダが存在しません</value>
+  </data>
+  <data name="FolderAccessDenied" xml:space="preserve">
+    <value>指定されたフォルダにアクセスする権限がありません</value>
+  </data>
+  <data name="InvalidFileNameCharacters" xml:space="preserve">
+    <value>ファイル名に使用できない文字が含まれています</value>
+  </data>
+  <data name="InvalidVersionCharacters" xml:space="preserve">
+    <value>バージョンに使用できない文字が含まれています</value>
+  </data>
+  <data name="SelectedFolderNotFound" xml:space="preserve">
+    <value>選択されたフォルダが存在しません</value>
+  </data>
+</root>

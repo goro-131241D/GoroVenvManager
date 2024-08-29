@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>使い方</title>
+    <style>
+        body {
+            font-size: 14px;
+        };
+        .monospace {
+            font-family: "Courier New", Courier, monospace;
+        };
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>使い方</h1>
+
+<h2>【タブ】</h2>
+<ol>
+<li>Create Venv: Venv環境の作成とテンプレートのコピー。</li>
+<li>Gloval Version: グローバルバージョンの設定。</li>
+<li>Local Version: ローカルバージョンの設定。</li>
+<li>Install: Pythonのインストール。</li>
+<li>pyenv: pyenv-win環境のインストール。</li>
+<li>Settin: 設定。</li>
+<li>Usage: 説明。</li>
+</ol>
+
+<h2>【Venv環境について】</h2>
+<p>
+.venvフォルダにVenv環境を作成します。本来はユーザーが自由に決められるのですが決め打ちです。</br>
+pyenv-winを使ってPythonのバージョン管理を行い、Venvで仮想環境を作成して使用します。二つのツールを組み合わせて使っています。
+</p>
+
+<h2>【手順】</h2>
+<ul>
+<li>Settingsタブで言語の設定をしてツールを再起動してください。</li>
+<li>初回、「5.pyenv」タブでpyenv-winの環境を整えてください。</li>
+<li>「4.Install」タブでPythonをインストールして使用可能にします。</li>
+<li>「2.Global Version」タブでグローバルなバージョンを設定します。グリーバルなとはフォルダに関係なく使えると言った意味です。</li>
+<li>「3．Local Version」タブでローカルなバージョンを設定します。ローカルなとはフォルダ内でのみ有効なバージョンです。</li>
+<li>xate Venv」タブで指定したフォルダにVenv環境を作り、指定のテンプレートフォルダをコピーします。</li>
+</ul>
+
+<h2>【バージョンの確認】</h2>
+<p>
+pyenv versionsでインストール済のバージョンを確認しています。</br>
+有効なバージョンの設定がない場合: 何も表示されないかダウンロードされているバージョンが表示されます。</br>
+グローバル設定が有効な場合: pyenv versionで有効なバージョン番号に続いて .pyenvフォルダ内の version ファイルの場所が表示されます。例 "* 3.12.5(set by C:\Users\UserName\.pyenv\pyenv-win\version)"</br>
+ローカルバージョンが有効な場合: バージョン番号につづいて .python-version ファイルの場所が表示されます。
+</p>
+<h3>ローカルバージョンが設定されている例</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+    3.12.3<br/>
+  * 3.12.4 (set by C:\Users\UserName\TestFolder\<span class="highlight">.python-version</span>)<br/>
+    3.12.5<br/>
+</p>
+<p>.python-versionファイルがローカルのフォルダに作成されています。親フォルダにも作成できますが、その場合はそのフォルダ以下の全てのフォルダで有効になります。</p>
+
+<h3>グローバルバージョンが設定されている例</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+  * 3.12.3 (set by C:\Users\UserName\<span class="highlight">.pyenv\pyenv-win\version</span>)<br/>
+    3.12.4<br/>
+    3.12.5<br/>
+</p>
+<p>.pyenvフォルダ内の version ファイルにバージョン番号が記載されています。.pyenvフォルダには、pyenvに必要なファイルやインストールしたpython等が置かれています。</p>
+
+<h3>グローバルバージョンもローカルバージョンも設定されていない例</h3>
+<p class="monospace">
+    PS C:\Users\UserName\TestFolder> pyenv versions<br/>
+    3.11.9<br/>
+    3.12.3 <br/>
+    3.12.4<br/>
+    3.12.5<br/>
+</p>
+<p>バージョンの横に何も表示されません。この場合は、pyenv-winでインストールされたpythonは<span class="highlight">使えません</span>のでご注意ください。</p>
+
+<h2>【詳細】</h2>
+<p>
+pyenv-winとpython -m venv .venvを使ってPythonのバージョン管理とVenv環境を作成します。</br>
+このツールで直接バージョン管理とVenv仮想環境を行っているわけではありません。</br>
+このツールを使わずにコマンドプロンプトから直接操作することも可能です。</br>
+簡易な補助ツールです。コマンドからのメッセージを画面に表示していますのでインストールなどが
+正常に完了したか等はメッセージを確認してください。</br>
+入力はデータの型などは確認していません。正しいデータを入力してください。</br>
+</p>
+<p>
+<h3>1.Create Venv: Venv環境の作成とテンプレートのコピー</h3>
+Venv環境を作成するフォルダを選択し、テンプレートを選択して「Create」ボタンを押すとVenv環境が作成されます。</br>
+テンプレートとはプログラミングをする際にあると便利なファイル類をまとめたものです。</br>
+このプログラムの保存されたフォルダのtemplatesフォルダ内にテンプレートがあります。</br>
+フォルダ名や中身のファイルを変更することで、自分好みのテンプレートを作成できます。</br>
+上書きすることを考慮して空のフォルダにしか作成できないので注意してください。</br>
+必要なファイルがある場合は一度退避してから作成してください。</br>
+</p>
+<p>
+<h3>2.Gloval Version: グローバルバージョンの設定</h3>
+グローバルバージョンとは、フォルダに関係なく使えるバージョンのことです。</br>
+使いやすいバージョンを設定して使ってください。</br>
+バージョンアップは頻繁にあるのでその都度、新しいバージョンをダウンロードして使ってください。</br>
+</p>
+<p>
+<h3>3.Local Version: ローカルバージョンの設定</h3>
+ローカルバージョンとは、フォルダ内でのみ有効なバージョンのことです。</br>
+開発をする際には、プロジェクトごとにバージョンを変えることがあります。</br>
+その際に使います。</br>
+設定できるバージョンは、Selectボタンでフォルダを選択するかSetボタンを押すと表示されます。</br>
+</p>
+<p>
+<h3>4.Install: Pythonのインストール</h3>
+バージョンアップがあった際や特殊なバージョンを使いたい場合に使います。</br>
+アンインストール機能はこのツールにはありません。コマンドから行ってください。</br>
+</p>
+<p>
+<h3>5.pyenv: pyenv-win環境のインストール</h3>
+初回とpyenv-winのバージョンアップをする際に使います。</br>
+バージョンアップする際は、ユーザーフォルダの .pyenv フォルダを削除してから実行してください。</br>
+その場合、インストールしたPythonのバージョンも削除されるので注意してください。</br>
+もしくわコマンドからアップデートしてください。</br>
+アップデート機能はそのうち追加するかもしれません。</br>
+</p>
+<p>
+<h3>6.Settings: 設定</h3>
+項目Languagesで言語の設定を行います。ツールの再起動後に有効になります。</br>
+項目BaseFolderでフォルダの設定など基準のフォルダを設定します。フォルダ選択時の操作を簡易にするためのものです。
+</p>
+<p>
+<h3>7.Usage: 説明</h3>
+</p>
+<h2>【問題点】</h2>
+<p>
+<ul>
+<li>Venvの作成で使用できるpythonのバージョンが設定されていない場合エラーが起きますが分かりづらい。</li>
+<li>pyenv-winのバージョンアップに対応していない。</li>
+<li>本来設定の自由度がある部分も決め打ちである。</li>
+<li>ローカル設定されているかグローバル設定されているかわかりずらい。</li>
+</ul>
+ほかにも改善点があるかもしれませんが、ご容赦ください。
+</p>
+
+<h2>【ライセンス】</h2>
+<p>
+このツールは、GNU General Public License v3.0 (GPL-3.0) の下でライセンスされています。</br>
+これにより、誰でも自由に使用、変更、再配布が可能ですが、変更後のソフトウェアも同じライセンスで公開する必要があります。</br>
+詳細は、以下のURLをご覧ください:</br>
+<a href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a>
+</p>
+
+<p>
+HP: https://goro-bizaid.com</br>
+X URL: https://x.com/goro_bizaid</br>
+X ユーザー名: @Goro_bizaid
+</p>
+
+</body>
+</html>
