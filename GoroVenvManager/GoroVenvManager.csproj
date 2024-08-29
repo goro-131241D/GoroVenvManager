@@ -122,8 +122,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>robocopy "C:\Users\kf\source\repos\GoroVenvManager\GoroVenvManager\Assets" "C:\Users\kf\source\repos\GoroVenvManager\GoroVenvManager\bin\Release\Assets"
-robocopy "C:\Users\kf\source\repos\GoroVenvManager\GoroVenvManager\templates" "C:\Users\kf\source\repos\GoroVenvManager\GoroVenvManager\bin\Release\templates" /E</PreBuildEvent>
+    <PreBuildEvent>robocopy "$(ProjectDir)Assets" "$(TargetDir)Assets"
+robocopy "$(ProjectDir)templates" "$(TargetDir)templates" "/E"</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>
