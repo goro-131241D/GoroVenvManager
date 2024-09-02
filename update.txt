@@ -1,0 +1,3 @@
+2024.09.02
+1.Added an "ERROR" indicator to the message box to make it easier to distinguish between normal and error messages.
+2.Corrected the error message that appears when the version is not entered during setup.

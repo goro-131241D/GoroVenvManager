@@ -251,7 +251,7 @@ namespace GoroVenvManager
 
                 EnabledAllButtons();
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.EnterVersionToInstall);
+                MessageBox.Show(Properties.Resources.EnterVersionToInstall, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -582,7 +582,7 @@ namespace GoroVenvManager
 
                     EnabledAllButtons();
                     SystemSounds.Asterisk.Play();
-                    MessageBox.Show(Properties.Resources.FolderNotEmpty);
+                    MessageBox.Show(Properties.Resources.FolderNotEmpty,"エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
@@ -736,7 +736,7 @@ namespace GoroVenvManager
             if (string.IsNullOrWhiteSpace(DirectoryPath))
             {
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.FilePathEmpty);
+                MessageBox.Show(Properties.Resources.FilePathEmpty, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -745,7 +745,7 @@ namespace GoroVenvManager
             if (DirectoryPath.IndexOfAny(invalidChars) >= 0)
             {
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.FilePathInvalidCharacters);
+                MessageBox.Show(Properties.Resources.FilePathInvalidCharacters, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -753,7 +753,7 @@ namespace GoroVenvManager
             if (!Directory.Exists(DirectoryPath))
             {
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.FolderNotFound);
+                MessageBox.Show(Properties.Resources.FolderNotFound, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -766,7 +766,7 @@ namespace GoroVenvManager
             catch (UnauthorizedAccessException)
             {
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.FolderAccessDenied);
+                MessageBox.Show(Properties.Resources.FolderAccessDenied, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -780,7 +780,8 @@ namespace GoroVenvManager
             if (string.IsNullOrWhiteSpace(version))
             {
                 SystemSounds.Asterisk.Play();
-                MessageBox.Show(Properties.Resources.EnterFolderBeforeSetting);
+                //MessageBox.Show(Properties.Resources.EnterFolderBeforeSetting, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Properties.Resources.EnterVersionBeforeSetting, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -791,7 +792,7 @@ namespace GoroVenvManager
                 if (version.Contains(c))
                 {
                     SystemSounds.Asterisk.Play();
-                    MessageBox.Show(Properties.Resources.InvalidVersionCharacters);
+                    MessageBox.Show(Properties.Resources.InvalidVersionCharacters, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -809,7 +810,7 @@ namespace GoroVenvManager
                 if (filename.Contains(c))
                 {
                     SystemSounds.Asterisk.Play();
-                    MessageBox.Show(Properties.Resources.InvalidFileNameCharacters);
+                    MessageBox.Show(Properties.Resources.InvalidFileNameCharacters, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
